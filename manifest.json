@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "SOS",
+  "version": "1.0.0",
+  "description": "Local injector for SIS Dashboard",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://efundi.nwu.ac.za/portal/site/6db8e2b1-ee3a-40e9-bf1d-daa17af71026/tool/89ca1748-c090-4fdb-b3df-7f5ea9db1a37/gradebook"
+      ],
+      "js": ["sites/efundi/gradebook/mths121.js"]
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/*"
+      ],
+      "js": ["sites/sis/dashboard.js"],
+      "all_frames": true
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["Links_files/grades/index.html"],
+      "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
+    }
+  ],
+
+  "action": {
+    "default_title": "SOS"
+  }
+}
