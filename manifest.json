@@ -22,7 +22,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["Links_files/grades/index.html"],
+      "resources": ["Links_files/saved_resource.html"],
       "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
     }
   ],
