@@ -13,7 +13,14 @@
     },
     {
       "matches": [
-        "https://sisportal-100997.campusnexus.cloud/*"
+        "https://efundi.nwu.ac.za/portal/*"
+      ],
+      "js": ["sites/efundi/efundi.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/Secure/links/Dashboard.aspx"
       ],
       "js": ["sites/sis/dashboard.js"],
       "all_frames": true
