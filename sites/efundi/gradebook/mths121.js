@@ -1,5 +1,7 @@
 const catTable = document.querySelectorAll(".gb-summary-category-tbody");
 const AssignTable = document.querySelectorAll(".gb-summary-assignments-tbody");
+const courseGrade = document.querySelector(".gb-summary-course-grade-value");
+const panelBody = document.querySelector(".panel-body");
 
 const grades = document.querySelectorAll(".gb-summary-grade-score-raw");
 const comments = document.querySelectorAll(".gb-summary-grade-comments");
@@ -70,12 +72,31 @@ function createSums() {
 
 const sums = createSums();
 
+let courseSum = 0;
 catTable.forEach((ct, i) => {
   const s = ct.querySelector(".gb-summary-category-grade");
+  const weight = ct.querySelector(".gb-summary-category-weight");
+
   s.textContent = `${sums[i]}%`;
 
-  if (i == 4) {
-    const weight = ct.querySelector(".gb-summary-category-weight");
-    weight.textContent = "";
+  if (i == 4) weight.textContent = "";
+  else if (i < 4) {
+    const sText = parseInt(s.textContent.slice(0, s.textContent.length - 1));
+    const weightText = parseInt(
+      weight.textContent.slice(0, s.textContent.length - 1)
+    );
+
+    courseSum += (sText * weightText) / 100;
   }
 });
+
+// Required
+const panelGraph = document.createElement("a");
+
+panelGraph.href = "javascript:;";
+panelGraph.classList.add("gb-summary-grade-stats");
+panelGraph.classList.add("pull-right");
+panelGraph.title = "Display course grade statistics.";
+
+panelBody.append(panelGraph);
+courseGrade.textContent = `${courseSum}%`;
