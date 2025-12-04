@@ -39,6 +39,12 @@
       ],
       "js": ["sites/sis/academicRecord.js"],
       "all_frames": true
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=5"
+      ],
+      "js": ["sites/sis/classResource.js"]
     }
   ],
 

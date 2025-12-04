@@ -49,13 +49,13 @@ if (url == mths121) {
     21: 59, // out of 75
     22: 52,
     23: 63,
-    24: 57,
-    25: 75,
-    26: 65,
+    24: 68,
+    25: 71,
+    26: 67,
     27: "-",
-    28: 68,
-    29: "-",
-    30: "-",
+    28: "-",
+    29: 73,
+    30: 68,
   };
   siteConfig.calcIndex = 4;
   siteConfig.showGraph = true;
@@ -165,8 +165,8 @@ if (url == mths121) {
     25: 11,
     26: 68,
     27: 24, //
-    28: 80,
-    29: 70,
+    28: 35,
+    29: 68,
   };
   siteConfig.calcIndex = 5;
   siteConfig.showGraph = false;
