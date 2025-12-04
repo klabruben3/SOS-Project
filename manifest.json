@@ -4,17 +4,25 @@
   "version": "1.0.0",
   "description": "Local injector for SIS Dashboard",
 
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+
   "content_scripts": [
     {
       "matches": [
-        "https://efundi.nwu.ac.za/portal/site/6db8e2b1-ee3a-40e9-bf1d-daa17af71026/tool/89ca1748-c090-4fdb-b3df-7f5ea9db1a37/gradebook"
+        "https://efundi.nwu.ac.za/portal/site/*"
       ],
-      "js": ["sites/efundi/gradebook/mths121.js"]
+      "js": [
+        "sites/efundi/gradebook/init.js",
+        "sites/efundi/gradebook/main.js",
+        "sites/efundi/gradebook/main_unfiltered.js"
+      ]
     },
     {
-      "matches": [
-        "https://efundi.nwu.ac.za/portal/*"
-      ],
+      "matches": ["https://efundi.nwu.ac.za/portal/*"],
       "js": ["sites/efundi/efundi.js"],
       "run_at": "document_start"
     },
@@ -24,17 +32,29 @@
       ],
       "js": ["sites/sis/dashboard.js"],
       "all_frames": true
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Academic.aspx?sm=7"
+      ],
+      "js": ["sites/sis/academicRecord.js"],
+      "all_frames": true
     }
   ],
 
   "web_accessible_resources": [
     {
-      "resources": ["Links_files/saved_resource.html"],
+      "resources": ["Links_files/saved_resource.html", "academicRecord/AcademicRecordPortal.html"],
       "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
     }
   ],
 
   "action": {
-    "default_title": "SOS"
+    "default_title": "SOS",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
   }
 }

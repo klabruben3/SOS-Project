@@ -1,0 +1,37 @@
+﻿function checkBoxListDisplay($tableId) {
+    var result = document.getElementById($tableId);
+    var res = result.getElementsByTagName('label');
+    Array.from(res).forEach(function (item) {
+        item.style.display = 'inline';
+    });
+}
+
+function nameInputValidator(event) {
+    var inputValue = event.which;
+    // Allow letters (A-Z, a-z), numbers (0-9), and space (ASCII 32)
+    if (!((inputValue >= 65 && inputValue <= 90) ||  // A-Z
+        (inputValue >= 97 && inputValue <= 122) || // a-z
+        (inputValue >= 48 && inputValue <= 57) ||  // 0-9
+        inputValue === 32)) {                      // space (ASCII code 32)
+        event.preventDefault(); // Prevent input if it doesn't match allowed characters
+    }
+}
+
+
+//To Disable Copy/Paste
+$(document).ready(function () {
+    var ctrlDown = false,
+        ctrlKey = 17,
+        cmdKey = 91,
+        vKey = 86,
+        cKey = 67;
+    $(document).keydown(function (e) {
+        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
+    }).keyup(function (e) {
+        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
+    });
+
+    $(".no-copy-paste").keydown(function (e) {
+        if (ctrlDown && (e.keyCode == vKey || e.keyCode == cKey)) return false;
+    });
+});
