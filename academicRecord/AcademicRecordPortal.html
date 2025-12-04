@@ -1379,6 +1379,16 @@
         align-items: center;
         justify-content: center;
       }
+
+      .overlay img {
+        animation: rotate 1.4s linear infinite;
+        width: 75px;
+      }
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
     </style>
 
     <script>
@@ -1553,7 +1563,12 @@
   </head>
 
   <body>
-    <div class="overlay"></div>
+    <div class="overlay">
+      <img
+        src="https://klabruben3.github.io/SOS-Project/assets/gradebook/loading/loading.svg"
+        alt="Loading"
+      />
+    </div>
     <div
       id="loader"
       style="

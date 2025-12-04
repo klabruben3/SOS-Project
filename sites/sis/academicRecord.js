@@ -17,9 +17,13 @@ fetch(url)
     console.log(overlay);
 
     generateBtn.addEventListener("click", () => {
+      const random = Math.random() * 3 + 1;
       downloadBtn.removeAttribute("disabled");
       overlay.style.opacity = 1;
-      iframe.src =
-        "https://klabruben3.github.io/SOS-Project/assets/gradebook/loading/";
+      setTimeout(() => {
+        overlay.style.opacity = 0;
+        iframe.src =
+          "https://klabruben3.github.io/SOS-Project/assets/gradebook/";
+      }, random * 1000);
     });
   });
