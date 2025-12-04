@@ -13,8 +13,6 @@ fetch(url)
     const generateBtn = document.getElementById("generateBtn");
     const downloadBtn = document.getElementById("downloadBtn");
     const overlay = document.querySelector(".overlay");
-    const resetBtn = document.getElementById("resetBtn");
-    console.log(overlay);
 
     generateBtn.addEventListener("click", () => {
       const random = Math.random() * 3 + 1;
