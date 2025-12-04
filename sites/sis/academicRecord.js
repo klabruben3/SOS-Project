@@ -9,21 +9,17 @@ fetch(url)
   .then((res) => res.text())
   .then((html) => {
     iframeParent.insertAdjacentHTML("beforeend", html);
+    const iframe = document.querySelector("iframe");
     const generateBtn = document.getElementById("generateBtn");
     const downloadBtn = document.getElementById("downloadBtn");
+    const overlay = document.querySelector(".overlay");
     const resetBtn = document.getElementById("resetBtn");
+    console.log(overlay);
 
     generateBtn.addEventListener("click", () => {
       downloadBtn.removeAttribute("disabled");
-
-      document.getElementById("downloadBtn").addEventListener("click", () => {
-        const link = document.createElement("a");
-        link.href = "..\\..\\assets\\gradebook\\AcademicRecord_42849349.pdf";
-        link.download = "myfile.pdf"; // filename when saved
-        link.style.display = "none";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      });
+      overlay.style.opacity = 1;
+      iframe.src =
+        "https://klabruben3.github.io/SOS-Project/assets/gradebook/loading/";
     });
   });

@@ -1368,6 +1368,17 @@
         cursor: not-allowed;
         border-color: #999999 !important;
       }
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: #f2f2f267;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
 
     <script>
@@ -1542,6 +1553,7 @@
   </head>
 
   <body>
+    <div class="overlay"></div>
     <div
       id="loader"
       style="
@@ -1630,7 +1642,7 @@
           </script>
         </div>
         <iframe
-          src="https://klabruben3.github.io/SOS-Project/assets/gradebook/"
+          src="https://klabruben3.github.io/SOS-Project/assets/gradebook/blank/"
           id="_ctl0_PlaceHolderMain_iframeContent"
           title="Links"
           align="left"
