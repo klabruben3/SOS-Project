@@ -1940,10 +1940,32 @@
       .fc-direction-rtl .fc-datagrid-expander {
         margin-left: 3px;
       }
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background-color: #3535359e;
+        z-index: 9999;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .overlay img {
+        animation: rotateLoad 1.4s linear infinite;
+      }
+
+      @keyframes rotateLoad {
+        to {
+          transform: rotate(-360deg);
+        }
+      }
     </style>
   </head>
 
   <body style="height: 98%" class="igx-typography igx-scrollbar">
+    <div class="overlay">
+      <img src="../../assets/dashboardLoading.svg" width="50" alt="Loading" />
+    </div>
     <app-root _nghost-xfh-c80="" ng-version="13.3.0"
       ><router-outlet _ngcontent-xfh-c80=""></router-outlet
       ><app-dashboard _nghost-xfh-c123=""
@@ -2036,7 +2058,7 @@
                           ><div class="fc-header-toolbar fc-toolbar">
                             <div class="fc-toolbar-chunk">
                               <h2 class="fc-toolbar-title" id="fc-dom-1">
-                                21 November 2025
+                                5 December 2025
                               </h2>
                             </div>
                             <div class="fc-toolbar-chunk"></div>
@@ -3565,6 +3587,8 @@
                                           justify-content: center;
                                           gap: 2px;
                                         "
+                                        target="_blank"
+                                        href="https://sisportal-100997.campusnexus.cloud/Secure/Student/Prof/My_Profile.aspx?sm=15"
                                       >
                                         View Full Profile
                                         <img
@@ -3669,26 +3693,30 @@
                                               _ngcontent-xfh-c118=""
                                               class="tile-icon2 ng-star-inserted"
                                             >
-                                              <span
-                                                _ngcontent-xfh-c118=""
-                                                class="icon"
-                                                style="
-                                                  position: relative;
-                                                  display: block;
-                                                  width: 100%;
-                                                  height: 100%;
-                                                "
-                                                ><img
-                                                  src="./grayArrow.png"
-                                                  width="7.5px"
+                                              <a
+                                                href="https://sisportal-100997.campusnexus.cloud/Secure/Student/Fin/accountInformation.aspx?sm=17"
+                                              >
+                                                <span
+                                                  _ngcontent-xfh-c118=""
+                                                  class="icon"
                                                   style="
-                                                    position: absolute;
-                                                    top: 50%;
-                                                    left: 50%;
-                                                    translate: -50% -50%;
+                                                    position: relative;
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 100%;
                                                   "
-                                                  alt=""
-                                              /></span>
+                                                  ><img
+                                                    src="./grayArrow.png"
+                                                    width="7.5px"
+                                                    style="
+                                                      position: absolute;
+                                                      top: 50%;
+                                                      left: 50%;
+                                                      translate: -50% -50%;
+                                                    "
+                                                    alt=""
+                                                /></span>
+                                              </a>
                                             </div>
                                           </div>
                                         </div>
@@ -3985,5 +4013,21 @@
       title="Twitter analytics iframe"
       src="./saved_resource(1).html"
     ></iframe>
+
+    <script defer>
+      const iframe = document
+        .querySelector(".container-fluid")
+        .querySelector(".container-fluid > div:nth-of-type(2)");
+      const overlay = document.querySelector(".overlay");
+
+      iframe.style.opacity = 0;
+
+      const random = Math.random() * 5 + 1;
+
+      setTimeout(() => {
+        overlay.style.opacity = 0;
+        iframe.style.opacity = 1;
+      }, random * 1000);
+    </script>
   </body>
 </html>
