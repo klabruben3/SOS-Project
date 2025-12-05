@@ -16,6 +16,7 @@ const final = document.getElementById(
 console.log(groupMarks, examMarks, final, instructor);
 
 if (instructor.textContent == "MADELEIN THIERSEN") {
+  // MTHS121
   const participation = 67.7;
   groupMarks[1].querySelector("td:nth-of-type(5)").textContent =
     participation.toFixed(2);
@@ -25,14 +26,17 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
+    "68.02 (UnPublished)";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
-  examMarks[3].querySelector("td:nth-of-type(4)").textContent = "";
+  examMarks[3].querySelector("td:nth-of-type(4)").textContent =
+    "72.97 (UnPublished)";
   examMarks[4].querySelector("td:nth-of-type(2)").textContent = "";
 
-  final.textContent = "";
+  final.textContent = "Predicted Final Grade : 69.10 (PS69)";
 } else if (instructor.textContent == "CARL JOHANNES LÖTZ VAN HEERDEN") {
-  const participation = 61.61;
+  // STTN125
+  const participation = 48.81;
   groupMarks[1].querySelector("td:nth-of-type(5)").textContent =
     participation.toFixed(2);
   groupMarks[2].querySelector("td:nth-of-type(2)").textContent =
@@ -42,10 +46,12 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
   ).toFixed(2);
 
   examMarks[1].querySelector("td:nth-of-type(4)").textContent = "";
-  examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
+  examMarks[2].querySelector("td:nth-of-type(2)").textContent =
+    "47.20 (UnPublished)";
 
-  final.textContent = "";
+  final.textContent = "Predicted Final Grade : 48.01 (FES)";
 } else if (instructor.textContent == "PHENYO BAGNOLD MODISANE") {
+  // CMPG121
   const participation = 68.2;
   groupMarks[1].querySelector("td:nth-of-type(5)").textContent =
     participation.toFixed(2);
@@ -56,11 +62,12 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
   ).toFixed(2);
 
   examMarks[1].querySelector("td:nth-of-type(4)").textContent =
-    "35.00 (UnPublished)";
+    "77.30 (UnPublished)";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
 
-  final.textContent = "Predicted Final Grade : 51.60 (P52)";
+  final.textContent = "Predicted Final Grade : 72.60 (PS73)";
 } else if (instructor.textContent == "CLAUD STEYN") {
+  // APPM121
   const participation = 72.5;
   groupMarks[1].querySelector("td:nth-of-type(5)").textContent =
     participation.toFixed(2);
@@ -74,19 +81,19 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     "56.00 (UnPublished)";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
 
-  final.textContent = "Predicted Final Grade : 64.25 (P64)";
+  final.textContent = "Predicted Final Grade : 64.25 (PS64)";
 } else if (instructor.textContent == "MAIDEYI PATRICIA MAREWO") {
-  const participation = 82.6;
+  // ALDE122
+  const participation = 72.6;
   groupMarks[1].querySelector("td:nth-of-type(5)").textContent =
     participation.toFixed(2);
   groupMarks[2].querySelector("td:nth-of-type(2)").textContent =
     participation.toFixed(2);
-  groupMarks[3].querySelector("td:nth-of-type(5)").textContent = (
-    participation / 2
-  ).toFixed(2);
+  groupMarks[3].querySelector("td:nth-of-type(5)").textContent =
+    participation.toFixed(2);
 
   examMarks[1].querySelector("td:nth-of-type(4)").textContent =
     "100.00 (UnPublished)";
 
-  final.textContent = "Predicted Final Grade : 71.73 (P64)";
+  final.textContent = "Predicted Final Grade : 72.60 (PS73)";
 }

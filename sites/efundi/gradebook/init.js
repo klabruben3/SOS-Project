@@ -165,7 +165,7 @@ if (url == mths121) {
     25: 11,
     26: 68,
     27: 24, //
-    28: 35,
+    28: 77,
     29: 68,
   };
   siteConfig.calcIndex = 5;
@@ -178,12 +178,12 @@ if (url == mths121) {
   siteConfig.showGraph = true;
 } else if (url == sttn125) {
   siteConfig.results = {
-    0: 25, // out of 35
+    0: 17, // out of 35
     1: 14, // out of 30
     2: 21, // out of 35
-    3: 17, // out of 35
-    4: 67,
-    5: 76,
+    3: 14, // out of 35
+    4: 57,
+    5: 47,
   };
   siteConfig.showGraph = true;
 } else if (url == sttn115) {

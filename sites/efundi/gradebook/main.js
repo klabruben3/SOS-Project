@@ -47,6 +47,7 @@ const createSums = () => {
     const gradeRowsLen = gradeRows.length;
 
     let sum = 0;
+    let count = 0;
     for (const gR of gradeRows) {
       const scoreString = gR.querySelector(
         ".gb-summary-grade-score-raw"
@@ -62,11 +63,18 @@ const createSums = () => {
       const outOf = parseInt(outOfString);
 
       if (scoreString.includes("-")) score = 0;
+      if (url == sttn125 && count > 3) break;
 
       sum += (score / outOf) * 100;
+      count++;
     }
 
-    sums.push(parseFloat((sum / gradeRowsLen).toFixed(2)));
+    const percent =
+      url == sttn125
+        ? parseFloat((sum / count).toFixed(2))
+        : parseFloat((sum / gradeRowsLen).toFixed(2));
+
+    sums.push(percent);
   }
 
   return sums;

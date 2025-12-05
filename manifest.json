@@ -42,7 +42,21 @@
     },
     {
       "matches": [
-        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=5"
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/MyGrades.aspx?sm=11"
+      ],
+      "js": ["sites/sis/myGrades.js"],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://siscurriculumplan-100997.campusnexus.cloud/registration/curriculumprogress?AuthGuid=87ce9283-0aa3-476c-a44e-f905c1d8fb1a&TargetURL=https://siscurriculumplan-100997.campusnexus.cloud/registration/curriculumprogress&Culture=en-GB"
+      ],
+      "js": ["sites/sis/curriculumProgress.js"],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=5", "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=11"
       ],
       "js": ["sites/sis/classResource.js"]
     }
@@ -52,6 +66,10 @@
     {
       "resources": ["Links_files/saved_resource.html", "academicRecord/AcademicRecordPortal.html"],
       "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
+    },
+    {
+      "resources": ["sites/sis/index.html"],
+      "matches": ["<all_urls>"]
     }
   ],
 
