@@ -49,9 +49,16 @@
     },
     {
       "matches": [
-        "https://siscurriculumplan-100997.campusnexus.cloud/registration/curriculumprogress?AuthGuid=87ce9283-0aa3-476c-a44e-f905c1d8fb1a&TargetURL=https://siscurriculumplan-100997.campusnexus.cloud/registration/curriculumprogress&Culture=en-GB"
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/MyGrades.aspx?sm=11"
       ],
-      "js": ["sites/sis/curriculumProgress.js"],
+      "js": ["sites/sis/blank.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Curriculum.aspx?sm=6", "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Registration.aspx?sm=26"
+      ],
+      "js": ["sites/sis/registration.js"],
       "all_frames": true
     },
     {

@@ -13,8 +13,6 @@ const final = document.getElementById(
   "_ctl0_PlaceHolderMain__ctl0_lblPredictedFinalGrade"
 );
 
-console.log(groupMarks, examMarks, final, instructor);
-
 if (instructor.textContent == "MADELEIN THIERSEN") {
   // MTHS121
   const participation = 67.7;
