@@ -43,11 +43,12 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
+    "71.05 (UnPublished)";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent =
     "47.20 (UnPublished)";
 
-  final.textContent = "Predicted Final Grade : 48.01 (FES)";
+  final.textContent = "Predicted Final Grade : 59.93 (FES)";
 } else if (instructor.textContent == "PHENYO BAGNOLD MODISANE") {
   // CMPG121
   const participation = 68.2;
