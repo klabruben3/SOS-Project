@@ -7,10 +7,9 @@ const gpa2 = document.getElementById(
 );
 
 const chosen = document.querySelectorAll(".chosen-single");
+gpa1.textContent = 65.23;
+gpa2.textContent = 65.23;
 if (chosen[1].textContent.includes("2025 Semester 1")) {
-  gpa1.textContent = 51.23;
-  gpa2.textContent = 51.23;
-
   const grades = [59.12, 62.84, 78.0, 70.43, 69.0];
 
   rows.forEach((row, i) => {
@@ -29,10 +28,7 @@ if (chosen[1].textContent.includes("2025 Semester 1")) {
     }
   });
 } else {
-  gpa1.textContent = "";
-  gpa2.textContent = "";
-
-  // const grades = [59.12, 62.84, 78.0, 70.43, 69.0];
+  const grades = [59.93, 69.1, 72.6, 64.25, 72.6];
 
   rows.forEach((row, i) => {
     if (i > 0) {
@@ -41,10 +37,10 @@ if (chosen[1].textContent.includes("2025 Semester 1")) {
       const letterGrade = row.querySelectorAll("td")[5].querySelector("span");
       const description = row.querySelectorAll("td")[6].querySelector("span");
 
-      credit.textContent = "";
-      grade.textContent = "";
-      letterGrade.textContent = "";
-      description.textContent = "";
+      credit.textContent = (12).toFixed(2);
+      grade.textContent = grades[i - 1].toFixed(2);
+      letterGrade.textContent = `PS${grades[i - 1].toFixed(2)}`;
+      description.textContent = "Pass";
     }
   });
 }

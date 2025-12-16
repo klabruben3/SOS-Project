@@ -24,11 +24,9 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
-    "68.02 (UnPublished)";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "68.02";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
-  examMarks[3].querySelector("td:nth-of-type(4)").textContent =
-    "72.97 (UnPublished)";
+  examMarks[3].querySelector("td:nth-of-type(4)").textContent = "72.97";
   examMarks[4].querySelector("td:nth-of-type(2)").textContent = "";
 
   final.textContent = "Predicted Final Grade : 69.10 (PS69)";
@@ -43,12 +41,11 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
-    "71.05 (UnPublished)";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "71.05";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent =
     "47.20 (UnPublished)";
 
-  final.textContent = "Predicted Final Grade : 59.93 (FES)";
+  final.textContent = "Predicted Final Grade : 59.93 (PS60)";
 } else if (instructor.textContent == "PHENYO BAGNOLD MODISANE") {
   // CMPG121
   const participation = 68.2;
@@ -60,8 +57,7 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
-    "77.30 (UnPublished)";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "77.30";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
 
   final.textContent = "Predicted Final Grade : 72.60 (PS73)";
@@ -76,8 +72,7 @@ if (instructor.textContent == "MADELEIN THIERSEN") {
     participation / 2
   ).toFixed(2);
 
-  examMarks[1].querySelector("td:nth-of-type(4)").textContent =
-    "56.00 (UnPublished)";
+  examMarks[1].querySelector("td:nth-of-type(4)").textContent = "56.00";
   examMarks[2].querySelector("td:nth-of-type(2)").textContent = "";
 
   final.textContent = "Predicted Final Grade : 64.25 (PS64)";
