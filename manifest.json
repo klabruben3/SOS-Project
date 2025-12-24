@@ -49,6 +49,13 @@
     },
     {
       "matches": [
+        "https://mail.google.com/mail/u/0/*"
+      ],
+      "js": ["sites/gmail/registration.js"],
+      "all_frames": true
+    },
+    {
+      "matches": [
         "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/MyGrades.aspx?sm=11"
       ],
       "js": ["sites/sis/blank.js"],
