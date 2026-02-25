@@ -12,9 +12,7 @@
 
   "content_scripts": [
     {
-      "matches": [
-        "https://efundi.nwu.ac.za/portal/site/*"
-      ],
+      "matches": ["https://efundi.nwu.ac.za/portal/site/*"],
       "js": [
         "sites/efundi/gradebook/init.js",
         "sites/efundi/gradebook/main.js",
@@ -48,9 +46,7 @@
       "all_frames": true
     },
     {
-      "matches": [
-        "https://mail.google.com/mail/u/0/*"
-      ],
+      "matches": ["https://mail.google.com/mail/u/0/*"],
       "js": ["sites/gmail/registration.js"],
       "all_frames": true
     },
@@ -63,27 +59,40 @@
     },
     {
       "matches": [
-        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Curriculum.aspx?sm=6", "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Registration.aspx?sm=26"
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Curriculum.aspx?sm=6",
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Registration.aspx?sm=26"
       ],
       "js": ["sites/sis/registration.js"],
       "all_frames": true
     },
     {
       "matches": [
-        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=5", "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=11"
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=5",
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/Student/Acad/ClassResources.aspx?sm=11"
       ],
       "js": ["sites/sis/classResource.js"]
+    },
+    {
+      "matches": ["https://my.nsfas.org.za/*"],
+      "js": ["sites/nsfas/default.js"]
     }
   ],
 
   "web_accessible_resources": [
     {
-      "resources": ["Links_files/saved_resource.html", "academicRecord/AcademicRecordPortal.html"],
+      "resources": [
+        "Links_files/saved_resource.html",
+        "academicRecord/AcademicRecordPortal.html"
+      ],
       "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
     },
     {
       "resources": ["sites/sis/index.html"],
       "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["sites/nsfas/index.html"],
+      "matches": ["https://my.nsfas.org.za/*"]
     }
   ],
 
