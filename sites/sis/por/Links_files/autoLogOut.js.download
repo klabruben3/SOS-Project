@@ -1,0 +1,48 @@
+﻿var singleTablogoutTime = 0;
+let fnInactivityTime=function() {
+    let time;
+    window.onload = resetTimer;
+    document.onload = resetTimer;
+    document.onmousemove = resetTimer;
+    document.onmousedown = resetTimer; // touchscreen presses
+    document.ontouchstart = resetTimer;
+    document.onclick = resetTimer; // touchpad clicks
+    document.onkeypress = resetTimer;
+    document.addEventListener('scroll', resetTimer, true); // improved; see comments
+
+    function logout() {
+        setTimeout(Finallogout, 1000)
+    }
+    function Finallogout() {
+                singleTablogoutTime = 1;
+        autoLogOutUserfromPopUp();                     //this will call the registration page function in OnLineRegWrap.aspx
+            autoLogOutUser();                 //this will call direct logout fuction which is in Header.ascx
+    }
+    function GetLogoutTime() {
+        let TimeOutAfterConvert = 0;
+        let TimeOut = getTimeValue();
+            TimeOutAfterConvert = (TimeOut) * 1000;
+        return TimeOutAfterConvert;
+    }
+    function resetTimer(type) {
+        if (type != 2) {
+            window.localStorage.setItem('event-logout-Timer', new Date());
+        }
+        if (singleTablogoutTime == 0) {
+            let TimeToLogout = GetLogoutTime();   //this value can use as Final logOut time which is in admin and Config tool
+            clearTimeout(time);
+            var IsAuthenticated = getAuthenticationValue();
+            if (IsAuthenticated ) {               //user is Authenticated setting timer to logout
+                time = setTimeout(logout, TimeToLogout)
+            }
+        }
+    }
+    //This function is use for fetching the user activity when Multiple tab is open then it will reset the timer
+    window.addEventListener('storage', function (event) {
+
+        if (event.key == 'event-logout-Timer') {
+            resetTimer(2);                        //whenever the user is active on another tab then it will reset the timer
+        }
+    });
+};
+setTimeout(fnInactivityTime(),1000)

@@ -1,3 +1,12 @@
-const frame = document.getElementById("_ctl0_PlaceHolderMain_iframeContent");
+const iframe = document.getElementById("_ctl0_PlaceHolderMain_iframeContent");
+const iframeParent = iframe.parentElement
 
-console.log(frame);
+iframe.remove();
+
+const url = chrome.runtime.getURL("sites/sis/por/index.html");
+
+fetch(url)
+  .then((res) => res.text())
+  .then((html) => {
+    iframeParent.insertAdjacentHTML("beforeend", html);
+  });

@@ -62,8 +62,7 @@
         "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Proof.aspx?sm=27"
       ],
       "js": ["sites/sis/por/por.js"],
-      "all_frames": true,
-      "run_at": "document_start"
+      "all_frames": true
     },
     {
       "matches": [
