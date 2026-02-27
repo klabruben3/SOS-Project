@@ -59,6 +59,14 @@
     },
     {
       "matches": [
+        "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Proof.aspx?sm=27"
+      ],
+      "js": ["sites/sis/por/por.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
         "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Curriculum.aspx?sm=6",
         "https://sisportal-100997.campusnexus.cloud/CMCPortal/secure/links/Registration.aspx?sm=26"
       ],
@@ -89,6 +97,10 @@
     {
       "resources": ["sites/sis/index.html"],
       "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["sites/sis/por/index.html"],
+      "matches": ["https://sisportal-100997.campusnexus.cloud/*"]
     },
     {
       "resources": ["sites/nsfas/index.html"],
