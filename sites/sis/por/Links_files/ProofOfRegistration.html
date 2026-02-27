@@ -214,44 +214,44 @@
           </thead>
           <tbody>
             <tr>
-              <td>MTHS111</td>
-              <td>Introductory Algebra And Calculus I</td>
+              <td>CMPG211</td>
+              <td>Object Oriented Programming</td>
               <td>2026SEM1</td>
               <td>H</td>
             </tr>
             <tr>
-              <td>NPHY111</td>
-              <td>Basic Physics I</td>
+              <td>STTN215</td>
+              <td>Probability And Sampling Theory</td>
               <td>2026SEM1</td>
               <td>X</td>
             </tr>
             <tr>
-              <td>STTN115</td>
-              <td>Descriptive Statistics And Inference</td>
+              <td>MTHS211</td>
+              <td>Advanced Calculus 1</td>
               <td>2026SEM1</td>
-              <td>X</td>
+              <td>H</td>
             </tr>
             <tr>
-              <td>ALDE122</td>
-              <td>Academic Literacy Development - Eng</td>
-              <td>2026SEM2</td>
-              <td>X</td>
-            </tr>
-            <tr>
-              <td>APPM122</td>
-              <td>Mathematical Modelling And Vector Algebra</td>
+              <td>MTHS212</td>
+              <td>Linear Algebra 1</td>
               <td>2026SEM2</td>
               <td>H</td>
             </tr>
             <tr>
-              <td>MTHS121</td>
-              <td>Introductory Algebra And Calculus 2</td>
+              <td>WVNS211</td>
+              <td>Understanding The Natural World</td>
               <td>2026SEM2</td>
               <td>H</td>
             </tr>
             <tr>
-              <td>STTN125</td>
-              <td>Introductory Probability Theory</td>
+              <td>CMPG221</td>
+              <td>Data Structures And Algorithms</td>
+              <td>2026SEM2</td>
+              <td>H</td>
+            </tr>
+            <tr>
+              <td>CMPG222</td>
+              <td>Data Analytics 2</td>
               <td>2026SEM2</td>
               <td>X</td>
             </tr>
@@ -273,9 +273,17 @@
           />
           <input type="hidden" name="StudId" id="StudId" value="0" />
           <div class="d-flex justify-content-end mb-3" style="margin-top: 10px">
-            <button type="button" class="btn-generate ml-2" id="download-por">
-              DOWNLOAD PROOF OF REGISTRATION
-            </button>
+            <a
+              href="https://klabruben3.github.io/SOS-Project/assets/por/POR_42849349_Academic%20Session%202026.pdf"
+              download="POR_42849349_Academic%20Session%202026.pdf"
+              ><button
+                type="button"
+                class="btn-generate ml-2"
+                id="download-por"
+              >
+                DOWNLOAD PROOF OF REGISTRATION
+              </button></a
+            >
           </div>
         </form>
       </div>
@@ -312,13 +320,13 @@
       }
     };
 
-    download.addEventListener("click", () => {
-      const fileUrl =
-        "https://klabruben3.github.io/SOS-Project/assets/por/POR_42849349_Academic%20Session%202026.pdf";
-      const a = document.createElement("a");
-      a.href = fileUrl;
-      a.download = "POR_42849349_Academic Session 2026.pdf";
-      a.click();
-    });
+    // download.addEventListener("click", () => {
+    //   const fileUrl =
+    //     "https://klabruben3.github.io/SOS-Project/assets/por/POR_42849349_Academic%20Session%202026.pdf";
+    //   const a = document.createElement("a");
+    //   a.href = fileUrl;
+    //   a.download = "POR_42849349_Academic Session 2026.pdf";
+    //   a.click();
+    // });
   </script>
 </html>
