@@ -1,245 +1,317 @@
-<!DOCTYPE html>
-<!-- saved from url=(0229)https://custom-100997.campusnexus.cloud/ProofOfRegistration/ProofOfRegistration?AuthGuid=be459965-fcea-43a2-8b3a-6a415a41ed41&TargetURL=https://custom-100997.campusnexus.cloud/ProofOfRegistration/ProofOfRegistration&Culture=en-GB -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Form</title>
     <script src="./jquery-3.6.0.min.js.download"></script>
-    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
     </style>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
 
-        th {
-            background-color: #6c3d91;
-            color: antiquewhite;
-            text-align: left;
-            padding: 10px;
-        }
+      th {
+        background-color: #6c3d91;
+        color: antiquewhite;
+        text-align: left;
+        padding: 10px;
+      }
 
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
-        }
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
 
-        th, td {
-            width: 25%; /* Equal width for all columns */
-        }
+      th,
+      td {
+        width: 25%; /* Equal width for all columns */
+      }
 
-        .custom-select {
-            border: 2px solid #6c3d91;
-            border-radius: 0.5rem;
-            background-color: #f9f9f9;
-            transition: border-color 0.3s;
-        }
+      .custom-select {
+        border: 2px solid #6c3d91;
+        border-radius: 0.5rem;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s;
+      }
 
-            .custom-select:focus {
-                border-color: #6c3d91;
-                box-shadow: 0 0 5px rgba(108, 61, 145, 0.5);
-            }
+      .custom-select:focus {
+        border-color: #6c3d91;
+        box-shadow: 0 0 5px rgba(108, 61, 145, 0.5);
+      }
 
-        .btn-generate {
-            border: 2px solid #6c3d91;
-            border-radius: 0.5rem;
-            background-color: #6c3d91;
-            color: antiquewhite;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+      .btn-generate {
+        border: 2px solid #6c3d91;
+        border-radius: 0.5rem;
+        background-color: #6c3d91;
+        color: antiquewhite;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+      }
 
-            .btn-generate:hover {
-                background-color: #5a2e76;
-                transform: scale(1.05);
-            }
+      .btn-generate:hover {
+        background-color: #5a2e76;
+        transform: scale(1.05);
+      }
     </style>
-</head>
-<body class="smartdisplay-1">
+  </head>
+  <body class="smartdisplay-1">
     <div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
-        <h1 class="pd-header mb-4" style="color: antiquewhite; text-align: center; font-weight: bold;border: none; background-color: #6c3d91 !important;"><b class="font-weight-bold" style="color: antiquewhite">Proof Of Registration</b></h1>
-        <form id="mainForm" action="https://custom-100997.campusnexus.cloud/ProofofRegistration/ProofOfRegistration/Generate" method="post">
-            <input name="__RequestVerificationToken" type="hidden" value="35Lkk7XA6T2gZjHBVZdwq-9XMvxLPqv5eqludYg6t2p-ModfxOn1GP9eQT6fQ8zXpBIYcL55yg67b8FUEdno1-tWwJFYRbPrYH-3v76ahW81">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="dropdown1">Select Enrollment</label>
-                    <select class="custom-select" data-val="true" data-val-number="The field EnrollId must be a number." data-val-required="The EnrollId field is required." id="dropdown1" name="EnrollId" required="required"><option value="">--Select--</option>
-<option value="77832">2FF-H09-N301P-FT - Bachelor Of Science With Computer Science And Mathematics</option>
-</select>
-                </div>
-                <div class="col-md-6">
-                    <label for="dropdown2">Academic Session</label>
-                    <select class="custom-select" data-val="true" data-val-number="The field AcadSessionId must be a number." data-val-required="The AcadSessionId field is required." id="dropdown2" name="AcadSessionId" required="required"><option value="">--Select--</option>
-<option value="3">AS2026 - Academic Session 2026</option>
-</select>
-                </div>
-                <br>
-                <div class="col-md-12 d-flex justify-content-end mb-3" style="margin-top:10px">
-                    <button type="submit" class="btn-generate justify-content-end ml-2">GENERATE</button>
-                </div>
-            </div>
-        </form>
+      <h1
+        class="pd-header mb-4"
+        style="
+          color: antiquewhite;
+          text-align: center;
+          font-weight: bold;
+          border: none;
+          background-color: #6c3d91 !important;
+        "
+      >
+        <b class="font-weight-bold" style="color: antiquewhite"
+          >Proof Of Registration</b
+        >
+      </h1>
+      <form id="mainForm">
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="35Lkk7XA6T2gZjHBVZdwq-9XMvxLPqv5eqludYg6t2p-ModfxOn1GP9eQT6fQ8zXpBIYcL55yg67b8FUEdno1-tWwJFYRbPrYH-3v76ahW81"
+        />
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="dropdown1">Select Enrollment</label>
+            <select
+              class="custom-select"
+              data-val="true"
+              data-val-number="The field EnrollId must be a number."
+              data-val-required="The EnrollId field is required."
+              id="dropdown1"
+              name="EnrollId"
+              required="required"
+            >
+              <option value="">--Select--</option>
+              <option value="77832">
+                2FF-H09-N301P-FT - Bachelor Of Science With Computer Science And
+                Mathematics
+              </option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="dropdown2">Academic Session</label>
+            <select
+              class="custom-select"
+              data-val="true"
+              data-val-number="The field AcadSessionId must be a number."
+              data-val-required="The AcadSessionId field is required."
+              id="dropdown2"
+              name="AcadSessionId"
+              required="required"
+            >
+              <option value="">--Select--</option>
+              <option value="3">AS2026 - Academic Session 2026</option>
+            </select>
+          </div>
+          <br />
+          <div
+            class="col-md-12 d-flex justify-content-end mb-3"
+            style="margin-top: 10px"
+          >
+            <button
+            type="button"
+              id="generate-por"
+              class="btn-generate justify-content-end ml-2"
+            >
+              GENERATE
+            </button>
+          </div>
+        </div>
+      </form>
 
-        <div id="partialViewContainer">
-
-
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Course List</title>
-    <style>
-        body {
+      <div id="partialViewContainer" style="opacity: 0;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student Course List</title>
+        <style>
+          body {
             font-family: Arial, sans-serif;
             margin: 20px;
-        }
+          }
 
-        table {
+          table {
             width: 100%;
             border-collapse: collapse;
-        }
+          }
 
-        th {
+          th {
             background-color: #6c3d91;
             color: antiquewhite;
             text-align: left;
             padding: 10px;
-        }
+          }
 
-        td {
+          td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
-        }
+          }
 
-        th, td {
+          th,
+          td {
             width: 25%; /* Equal width for all columns */
-        }
+          }
 
-        .custom-select {
+          .custom-select {
             border: 2px solid #6c3d91;
             border-radius: 0.5rem;
             background-color: #f9f9f9;
             transition: border-color 0.3s;
-        }
+          }
 
-            .custom-select:focus {
-                border-color: #6c3d91;
-                box-shadow: 0 0 5px rgba(108, 61, 145, 0.5);
-            }
+          .custom-select:focus {
+            border-color: #6c3d91;
+            box-shadow: 0 0 5px rgba(108, 61, 145, 0.5);
+          }
 
-        .btn-generate {
+          .btn-generate {
             border: 2px solid #6c3d91;
             border-radius: 0.5rem;
             background-color: #6c3d91;
             color: antiquewhite;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+            transition:
+              background-color 0.3s,
+              transform 0.2s;
+          }
 
-            .btn-generate:hover {
-                background-color: #5a2e76;
-                transform: scale(1.05);
-            }
-    </style>
+          .btn-generate:hover {
+            background-color: #5a2e76;
+            transform: scale(1.05);
+          }
+        </style>
 
-
-    <table>
-        <thead>
+        <table>
+          <thead>
             <tr>
-                <th>Course Code</th>
-                <th>Course Description</th>
-                <th>Term Code</th>
-                <th>Course Attribute</th>
+              <th>Course Code</th>
+              <th>Course Description</th>
+              <th>Term Code</th>
+              <th>Course Attribute</th>
             </tr>
-        </thead>
-        <tbody>
-                    <tr>
-                        <td>MTHS111</td>
-                        <td>Introductory Algebra And Calculus I</td>
-                        <td>2026SEM1</td>
-                        <td>H</td>
-                    </tr>
-                    <tr>
-                        <td>NPHY111</td>
-                        <td>Basic Physics I</td>
-                        <td>2026SEM1</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>STTN115</td>
-                        <td>Descriptive Statistics And Inference</td>
-                        <td>2026SEM1</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>ALDE122</td>
-                        <td>Academic Literacy Development - Eng</td>
-                        <td>2026SEM2</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td>APPM122</td>
-                        <td>Mathematical Modelling And Vector Algebra</td>
-                        <td>2026SEM2</td>
-                        <td>H</td>
-                    </tr>
-                    <tr>
-                        <td>MTHS121</td>
-                        <td>Introductory Algebra And Calculus 2</td>
-                        <td>2026SEM2</td>
-                        <td>H</td>
-                    </tr>
-                    <tr>
-                        <td>STTN125</td>
-                        <td>Introductory Probability Theory</td>
-                        <td>2026SEM2</td>
-                        <td>X</td>
-                    </tr>
-        </tbody>
-    </table>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MTHS111</td>
+              <td>Introductory Algebra And Calculus I</td>
+              <td>2026SEM1</td>
+              <td>H</td>
+            </tr>
+            <tr>
+              <td>NPHY111</td>
+              <td>Basic Physics I</td>
+              <td>2026SEM1</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <td>STTN115</td>
+              <td>Descriptive Statistics And Inference</td>
+              <td>2026SEM1</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <td>ALDE122</td>
+              <td>Academic Literacy Development - Eng</td>
+              <td>2026SEM2</td>
+              <td>X</td>
+            </tr>
+            <tr>
+              <td>APPM122</td>
+              <td>Mathematical Modelling And Vector Algebra</td>
+              <td>2026SEM2</td>
+              <td>H</td>
+            </tr>
+            <tr>
+              <td>MTHS121</td>
+              <td>Introductory Algebra And Calculus 2</td>
+              <td>2026SEM2</td>
+              <td>H</td>
+            </tr>
+            <tr>
+              <td>STTN125</td>
+              <td>Introductory Probability Theory</td>
+              <td>2026SEM2</td>
+              <td>X</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <form id="downloadPdfForm" action="https://custom-100997.campusnexus.cloud/ProofofRegistration/ProofOfRegistration/DownloadPdf" method="post">
-            <input name="__RequestVerificationToken" type="hidden" value="hw604gZI2FtEz6g5NyNm7EleSOCx9gPx58Xf3qlPv6_WqYAciWkTSTrlo7peVJ8aKxHUbIUg1RwlspN0fZqZ8bhqSD78LxCYZPMVpAKIwHw1">
-            <input type="hidden" name="EnrollId" id="EnrollId" value="77832"> 
-            <input type="hidden" name="AcadSessionId" id="AcadSessionId" value="3">
-            <input type="hidden" name="StudId" id="StudId" value="0">
-            <div class="d-flex justify-content-end mb-3" style="margin-top:10px">
-                <button type="submit" class="btn-generate ml-2">DOWNLOAD PROOF OF REGISTRATION</button>
-            </div>
+        <form id="downloadPdfForm">
+          <input
+            name="__RequestVerificationToken"
+            type="hidden"
+            value="hw604gZI2FtEz6g5NyNm7EleSOCx9gPx58Xf3qlPv6_WqYAciWkTSTrlo7peVJ8aKxHUbIUg1RwlspN0fZqZ8bhqSD78LxCYZPMVpAKIwHw1"
+          />
+          <input type="hidden" name="EnrollId" id="EnrollId" value="77832" />
+          <input
+            type="hidden"
+            name="AcadSessionId"
+            id="AcadSessionId"
+            value="3"
+          />
+          <input type="hidden" name="StudId" id="StudId" value="0" />
+          <div class="d-flex justify-content-end mb-3" style="margin-top: 10px">
+            <button type="button" class="btn-generate ml-2" id="download-por">
+              DOWNLOAD PROOF OF REGISTRATION
+            </button>
+          </div>
         </form>
-
-
-
-</div>
+      </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#mainForm').submit(function (event) {
-                event.preventDefault(); // Prevent default form submission
+    <!-- <script>
+      $(document).ready(function () {
+        $("#mainForm").submit(function (event) {
+          event.preventDefault(); // Prevent default form submission
 
-                var formData = $(this).serialize(); // Serialize form data
+          var formData = $(this).serialize(); // Serialize form data
 
-                $.post($(this).attr('action'), formData, function (result) {
-                    console.log(result);
-                    $('#partialViewContainer').html(result);
-                });
-            });
+          $.post($(this).attr("action"), formData, function (result) {
+            console.log(result);
+            $("#partialViewContainer").html(result);
+          });
         });
-    </script>
+      });
+    </script> -->
+  </body>
+  <script>
+    const generate = document.getElementById("generate-por");
+    const download = document.getElementById("download-por");
+    const select1 = document.getElementById("dropdown1");
+    const select2 = document.getElementById("dropdown2");
+    const constainer = document.getElementById("partialViewContainer")
 
+    generate.style.backgroundColor = "red";
 
-
-
-
-</body></html>
+    generate.onclick = () => {
+      if (
+        select1.options.selectedIndex == 1 &&
+        select2.options.selectedIndex == 1
+      ) {
+        constainer.style.opacity = 1
+      }
+    };
+  </script>
+</html>

@@ -6,7 +6,7 @@ iframe.remove();
 const url = chrome.runtime.getURL("sites/sis/por/index.html");
 
 fetch(url)
-  .then((res) => res.text())
-  .then((html) => {
+.then((res) => res.text())
+.then((html) => {
     iframeParent.insertAdjacentHTML("beforeend", html);
-  });
+});
